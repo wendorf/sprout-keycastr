@@ -7,4 +7,10 @@ describe 'sprout-keycastr::default' do
     chef_run.converge(described_recipe)
     expect(chef_run).to include_recipe('sprout-keycastr::install')
   end
+
+  it 'grants keycastr accessibility privileges' do
+    chef_run.converge(described_recipe)
+    expect(chef_run).to include_recipe('sprout-keycastr::enable_accessibility')
+  end
+
 end

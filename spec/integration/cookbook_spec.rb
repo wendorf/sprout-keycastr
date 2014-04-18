@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe 'sprout-keycastr' do
+  let(:plist_filename) { 'net.stephendeken.KeyCastr' }
+
   before :all do
     expect(File).not_to be_exists('/Applications/KeyCastr.app')
     expect(system('soloist')).to be_true
@@ -8,5 +10,11 @@ describe 'sprout-keycastr' do
 
   it 'installs KeyCastr' do
     expect(File).to be_exists('/Applications/KeyCastr.app')
+  end
+
+  it 'adds KeyCastr to the the accessability DB' do
+    run_query = %q(sudo sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db")
+    results = `echo "SELECT allowed FROM access WHERE client = '#{plist_filename}';" | #{run_query}`
+    expect(results.chomp).to eq('1')
   end
 end
