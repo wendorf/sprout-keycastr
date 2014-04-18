@@ -1,10 +1,10 @@
 require 'unit/spec_helper'
 
 describe 'sprout-keycastr::default' do
-  let(:runner) { ChefSpec::Runner.new }
+  let(:chef_run) { ChefSpec::Runner.new }
 
   it 'installs keycastr' do
-    runner.converge(described_recipe)
-    expect(runner).to include_recipe('sprout-keycastr::install')
+    chef_run.converge(described_recipe)
+    expect(chef_run).to include_recipe('sprout-keycastr::install')
   end
 end
