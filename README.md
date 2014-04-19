@@ -32,6 +32,7 @@ TODO
 1. `sprout-keycastr`
 1. `sprout-keycastr::install`
 1. `sprout-keycastr::enable_accessibility`
+1. `sprout-keycastr::start_on_startup`
 
 ## Contributing
 

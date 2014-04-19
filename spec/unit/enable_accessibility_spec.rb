@@ -16,7 +16,7 @@ describe 'sprout-keycastr::enable_accessibility' do
     chef_run.node.set['sprout']['keycastr']['plist_filename'] = 'foo.bar.baz'
     Mixlib::ShellOut.stub(:new).with(
       %Q(echo "SELECT allowed FROM access WHERE client = 'foo.bar.baz';" | #{run_on_db})
-    ).and_return(shellout, run_command: nil)
+    ).and_return(shellout)
     chef_run.converge(described_recipe)
   end
 
