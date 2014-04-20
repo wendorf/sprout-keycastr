@@ -1,5 +1,5 @@
 include_recipe 'sprout-keycastr::install'
-include_recipe 'sprout-osx-base::addloginitem'
+include_recipe 'sprout-base::addloginitem'
 
 execute 'Start KeyCastr on login' do
   command %Q(su #{node['current_user']} -c "addloginitem /Applications/KeyCastr.app")

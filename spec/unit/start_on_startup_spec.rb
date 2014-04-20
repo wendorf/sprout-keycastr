@@ -18,7 +18,7 @@ describe 'sprout-keycastr::start_on_startup' do
   end
 
   it 'ensures addloginitem is installed' do
-    expect(chef_run).to include_recipe('sprout-osx-base::addloginitem')
+    expect(chef_run).to include_recipe('sprout-base::addloginitem')
   end
 
   context 'when there is no login entry' do
