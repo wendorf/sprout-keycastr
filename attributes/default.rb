@@ -1,1 +1,1 @@
-node.default['sprout']['keycastr']['plist_filename'] = 'net.stephendeken.KeyCastr'
+node.default['sprout']['keycastr']['domain'] = 'net.stephendeken.KeyCastr'
