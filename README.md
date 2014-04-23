@@ -23,9 +23,12 @@ bundle exec soloist
 ### Attributes
 
 *NOTE:* All preferences are namespaced under `sprout => keycastr` they include:
-TODO
+
 * `source` &mdash; The path to the dmg to download from the web; default is `http://cheffiles.pivotallabs.com/keycastr_0.8.0.dmg`
 * `checksum` &mdash; The checksum for the dmg; checksum for the default dmg is located in attributes/install.rb
+* `domain` &mdash; the key which KeyCastr registeres itself with apple. to reference the plist as well as the entry in
+the accessibility databse ; default is `net.stephendeken.KeyCastr`
+* `font_size` &mdash; the font size to use; default is `36`
 
 ### Recipes
 
@@ -33,6 +36,7 @@ TODO
 1. `sprout-keycastr::install`
 1. `sprout-keycastr::enable_accessibility`
 1. `sprout-keycastr::start_on_startup`
+1. `sprout-keycastr::adjusted_font_size`
 
 ## Contributing
 

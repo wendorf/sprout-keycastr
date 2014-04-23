@@ -15,4 +15,8 @@ describe 'sprout-keycastr::default' do
   it 'starts keycastr automatically' do
     expect(chef_run).to include_recipe('sprout-keycastr::start_on_startup')
   end
+
+  it 'adjusts the font size' do
+    expect(chef_run).to include_recipe('sprout-keycastr::adjusted_font_size')
+  end
 end

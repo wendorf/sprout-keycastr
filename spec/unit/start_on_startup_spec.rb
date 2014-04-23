@@ -8,7 +8,7 @@ describe 'sprout-keycastr::start_on_startup' do
   before do
     Mixlib::ShellOut.stub(:new).with(
       %q(osascript -e 'tell application "System Events" to get every login item whose name is "KeyCastr"')
-    ).and_return(shellout, run_command: nil)
+    ).and_return(shellout)
 
     chef_run.converge(described_recipe)
   end
