@@ -29,6 +29,8 @@ bundle exec soloist
 * `domain` &mdash; the key which KeyCastr registeres itself with apple. to reference the plist as well as the entry in
 the accessibility databse ; default is `net.stephendeken.KeyCastr`
 * `font_size` &mdash; the font size to use; default is `36`
+* `window_placement` &mdash; where to place the KeyCastr window `:top_left|:top_right|:bottom_left|:bottom_right` ; default is `:top_right`
+
 
 ### Recipes
 
@@ -36,7 +38,12 @@ the accessibility databse ; default is `net.stephendeken.KeyCastr`
 1. `sprout-keycastr::install`
 1. `sprout-keycastr::enable_accessibility`
 1. `sprout-keycastr::start_on_startup`
+1. `sprout-keycastr::suppressed_first_time_launch_dialog`
+1. `sprout-keycastr::only_cast_command_keys`
+1. `sprout-keycastr::suppressed_preferences_on_launch`
 1. `sprout-keycastr::adjusted_font_size`
+1. `sprout-keycastr::adjusted_window_placement`
+1. `sprout-keycastr::only_in_menubar`
 
 ## Contributing
 

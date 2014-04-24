@@ -16,7 +16,27 @@ describe 'sprout-keycastr::default' do
     expect(chef_run).to include_recipe('sprout-keycastr::start_on_startup')
   end
 
+  it 'suppresses first-time-launch dialog' do
+    expect(chef_run).to include_recipe('sprout-keycastr::suppressed_first_time_launch_dialog')
+  end
+
+  it 'only casts command keys' do
+    expect(chef_run).to include_recipe('sprout-keycastr::only_cast_command_keys')
+  end
+
+  it 'suppresses preferences dialog on launch' do
+    expect(chef_run).to include_recipe('sprout-keycastr::suppressed_preferences_on_launch')
+  end
+
   it 'adjusts the font size' do
     expect(chef_run).to include_recipe('sprout-keycastr::adjusted_font_size')
+  end
+
+  it 'adjusts the window placement' do
+    expect(chef_run).to include_recipe('sprout-keycastr::adjusted_window_placement')
+  end
+
+  it 'only shows KeyCatr in the menubar (so it wont show in the app switcher)' do
+    expect(chef_run).to include_recipe('sprout-keycastr::only_in_menubar')
   end
 end

@@ -1,4 +1,4 @@
-include_recipe('sprout-keycastr::install')
+include_recipe 'sprout-keycastr::install'
 
 osx_defaults 'Adjusts KeyCastr font size' do
   domain node['sprout']['keycastr']['domain']
