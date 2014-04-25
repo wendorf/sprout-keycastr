@@ -43,7 +43,7 @@ the accessibility databse ; default is `net.stephendeken.KeyCastr`
 1. `sprout-keycastr::suppressed_preferences_on_launch`; Don't show preferences whenever the app is launched
 1. `sprout-keycastr::adjusted_font_size` &mdash; Adjusts the size of the font and chrome displaying casted keys
 1. `sprout-keycastr::autocheck_updates` &mdash; Turns this on by default so that the user is not prompted on first launch
-1. `sprout-keycastr::only_in_menubar` &mdash; Disables showing in the Doc and the application switcher (Cmd+Tab)
+1. `sprout-keycastr::only_in_menubar` &mdash; Disables showing in the Doc and the application switcher (Cmd+Tab) _note: this recipe is **not** part of the default as it is a bit flakey at the moment._
 1. `sprout-keycastr::adjusted_window_placement` &mdash; Sets which corner of the display to show the keys, see the `window_placement` attribute for options. _note: this recipe is **not** part of the default as it is a bit flakey at the moment._
 
 ## Contributing

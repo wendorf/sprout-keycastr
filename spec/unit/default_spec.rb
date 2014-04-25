@@ -36,7 +36,13 @@ describe 'sprout-keycastr::default' do
     expect(chef_run).to include_recipe('sprout-keycastr::autocheck_updates')
   end
 
+  it 'Adjusts KeyCastr Window Placement' do
+    pending 'the recipe is not affecting the KeyCastr Application and may contribute to it totally failing to cast'
+    expect(chef_run).to include_recipe('sprout-keycastr::adjusted_window_placement')
+  end
+
   it 'only shows KeyCatr in the menubar (so it wont show in the app switcher)' do
+    pending 'the recipe is not affecting the KeyCastr app so is not going to be run users have to set this themselves'
     expect(chef_run).to include_recipe('sprout-keycastr::only_in_menubar')
   end
 end
