@@ -16,7 +16,7 @@ describe 'sprout-keycastr::adjusted_window_placement' do
   it 'updates window placement' do
     key = 'NSWindow Frame KCBezelWindow default.bezelWindow'
     expect(chef_run).to write_osx_defaults('foo.bar.baz', key).with_string(
-      '2406 1272 200 325 0 0 2560 1337 '
+      '2354 1353 200 0 0 0 2560 1418 '
     )
   end
 

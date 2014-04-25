@@ -32,8 +32,8 @@ describe 'sprout-keycastr::default' do
     expect(chef_run).to include_recipe('sprout-keycastr::adjusted_font_size')
   end
 
-  it 'adjusts the window placement' do
-    expect(chef_run).to include_recipe('sprout-keycastr::adjusted_window_placement')
+  it 'enables autochecking for updates so that user is not prompted first time' do
+    expect(chef_run).to include_recipe('sprout-keycastr::autocheck_updates')
   end
 
   it 'only shows KeyCatr in the menubar (so it wont show in the app switcher)' do

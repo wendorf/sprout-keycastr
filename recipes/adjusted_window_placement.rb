@@ -12,5 +12,5 @@ osx_defaults "Adjusts KeyCastr Window Placement to #{placement_key}" do
   domain node['sprout']['keycastr']['domain']
   key 'NSWindow Frame KCBezelWindow default.bezelWindow'
   string placements[placement_key.to_sym]
-  only_if { placements[placement_key.to_sym] != nil }
+  only_if { placements[placement_key.to_sym] }
 end
