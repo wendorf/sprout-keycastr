@@ -1,6 +1,6 @@
 name             'sprout-keycastr'
 maintainer       'Pivotal'
-maintainer_email 'sprout-maintainers@pivotallabs.com'
+maintainer_email 'sprout-maintainers@googlegroups.com'
 license          'MIT'
 description      'Installs and configures KeyCastr'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
