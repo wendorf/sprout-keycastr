@@ -1,19 +1,17 @@
 require 'unit/spec_helper'
 
 describe 'sprout-keycastr::install' do
-  let(:chef_run) { ChefSpec::Runner.new }
+  let(:runner) { ChefSpec::Runner.new }
   before do
-    chef_run.converge(described_recipe)
+    runner.converge(described_recipe)
   end
 
-  it 'installs keycastr in /Applications' do
-    m = ChefSpec::Matchers::ResourceMatcher.new(:dmg_package, :install, 'KeyCastr')
-    expect(chef_run).to m.with(
-      dmg_name: 'KeyCastr',
-      owner: 'fauxhai',
-      source: chef_run.node['sprout']['keycastr']['source'],
-      checksum: chef_run.node['sprout']['keycastr']['checksum']
-    )
+  it 'installs homebrew cask' do
+    expect(runner).to include_recipe 'homebrew::cask'
   end
 
+  it 'installs keycastr' do
+    runner.converge(described_recipe)
+    expect(runner).to install_cask('keycastr')
+  end
 end
